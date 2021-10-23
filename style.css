@@ -1,5 +1,5 @@
 body {
-  background-color: #E3E9EE;;
+  background-color: #E3E9EE;
 }
 
 h1 {
@@ -17,13 +17,13 @@ p {
 
 .topnav {
   overflow: hidden;
-  background-color: #9C9B94;
+  background-color: #B4BFC9;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #FFDF00;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
