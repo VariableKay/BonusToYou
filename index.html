@@ -13,12 +13,11 @@
     <h1>Welcome</h1>
     <p>Still scratching that head of yours because of Margaret Chan's seemingly incompetent punishments? No worries!</p>
     <p>Simply submit a link (please heed the warning above thanks), and this handy dandy thing will generate a short essay based on the article you chose! Very pog</p>
-    <input id="userInput" type="text" placeholder="gimme that URL">
+    <input id="submittedURL" type="text" placeholder="gimme that URL">
     <button onclick="returnText()">Submit</button>
     <script>
 	    function returnText(){
-    	    let input = document.getElementById("userInput").value;
-            alert(input)
+    	    let desiredURL = document.getElementById("submittedURL").value;
     }
     </script>
   </body>
