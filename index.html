@@ -18,29 +18,7 @@
     <script>
 	    function grabDesc(){
     	    let desiredURL = document.getElementById("submittedURL").value;
-	    var txt = "";
-  document.getElementById("demo").innerHTML = txt;
-  $.ajax({
-      url: desiredURL,
-      error: function() {
-        txt = "Unable to retrieve webpage source HTML";
-      }, 
-      success: function(response){
-          response = $.parseHTML(response);
-          $.each(response, function(i, el){
-              if(el.nodeName.toString().toLowerCase() == 'meta' && $(el).attr("name") != null && typeof $(el).attr("name") != "undefined"){
-                  txt += $(el).attr("name") +"="+ ($(el).attr("content")?$(el).attr("content"):($(el).attr("value")?$(el).attr("value"):"")) +"<br>";
-                  console.log($(el).attr("name") ,"=", ($(el).attr("content")?$(el).attr("content"):($(el).attr("value")?$(el).attr("value"):"")), el);
-              }
-          });
-      },
-      complete: function(){
-          document.getElementById("demo").innerHTML = txt;
-      }
-  });
-}
-		    
-    
+	    }    
     </script>
   </body>
     
