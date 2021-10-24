@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<html>
 <head>
   <title>BonusToYou</title>
   <link rel="icon" type="image/png" href="">
@@ -12,13 +12,17 @@
 	  </div>
     <h1>Welcome</h1>
     <p>Still scratching that head of yours because of Margaret Chan's seemingly incompetent punishments? No worries!</p>
-    <p>Simply submit a link (please heed the warning above thanks), and this handy dandy thing will generate a short essay based on the article you chose! Very pog</p>
-    <p><input id="submittedURL" type="text" placeholder="gimme that URL"></p>
-    <p><button onclick="grabDesc()">Submit</button></p>
-    <script>
-	    function grabDesc(){
-    	    let desiredURL = document.getElementById("submittedURL").value;
-	    }    
-    </script>
+    <p>Simply submit a link (please heed the warning above thanks), and this handy dandy thing will generate a short paragraph based on the article you chose! Very pog</p>
+    <form action="">
+  <p><input type="text" id="lname" name="desiredURL" placeholder="gimme that URL"></p>
+  <p><input type="submit" value="Submit"></p>
+</form>
+    <?php
+      $url = $_GET['desiredURL'];
+      error_reporting(0);
+      $metas = get_meta_tags($url);
+      $description = $metas['description'];
+      echo "<p>{$description}</p>";
+    ?>
   </body>
-    
+</html>
